@@ -12,7 +12,7 @@
         <button v-on:click="decrease_num">Decrease the Number --</button>
         <p> {{number}}</p>
         <p v-on:mousemove="cordinator_increase">Cordinator : {{x}} / {{y}}
-            <span>- Dead Stop</span>
+            <span v-on:mousemove.stop>- Dead Stop</span>
         </p>
     </div>
 
