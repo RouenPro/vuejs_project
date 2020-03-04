@@ -8,12 +8,22 @@
 <body>
     <script src="vue.js"></script>
     <div id="app">
-        
+        <button v-on:click="increase_num">Click me</button>
+        <p>{{ increase }}</p>
     </div>
+        
 
     <script>
         new Vue({
-            
+            el:"#app",
+            data:{
+                increase: 0
+            },
+            methods:{
+                increase_num:function(){
+                    this.increase++
+                }
+            }
             
         });
     </script>
