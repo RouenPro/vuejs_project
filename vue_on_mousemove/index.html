@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="vue.js"></script>
+    <div id="app">
+        <button v-on:click="increase_num">Plus Number ++</button>
+        <button v-on:click="decrease_num">Decrease the Number --</button>
+        <p> {{number}}</p>
+        <p v-on:mousemove="cordinator_increase">Cordinator : {{x}} / {{y}}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                title: 'Tested',
+                number: 0,
+                x: 0,
+                y: 0,
+                
+            },
+            methods:{
+                increase_num:function(){
+                    this.number++
+                },
+                decrease_num:function(){
+                    this.number--
+                },
+                cordinator_increase:function(event){
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                    
+                }
+            }
+    
+        });
+    </script>
+</body>
+</html>
