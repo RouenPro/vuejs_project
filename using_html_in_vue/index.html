@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="vue.js"></script>
+    <div id="app">
+        <p v-once>{{title}}</p>
+        <p>{{sayhello()}} - <a v-bind:href="link">Google xD</a> </p>
+        <hr/>
+        <p v-html="google_link"></p>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                title: 'Hello world',
+                link: 'https://www.google.com/?client=safari',
+                google_link: "<a href='https://www.google.com/?client=safari'>Google_link</a> "
+            },
+            methods:{
+                sayhello: function(){
+                    this.title = "Rouen ProxD"
+                    return this.title
+                }
+            }
+        });
+    </script>
+</body>
+</html>
