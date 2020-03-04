@@ -10,6 +10,7 @@
     <div id="app">
         <button v-on:click="increase_num">Click me</button>
         <p>{{ increase }}</p>
+        <button v-on:click="Reset_num">Reset</button>
     </div>
         
 
@@ -22,6 +23,9 @@
             methods:{
                 increase_num:function(){
                     this.increase++
+                },
+                Reset_num:function(){
+                    this.increase = 0
                 }
             }
             
